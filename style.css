@@ -8,3 +8,116 @@
 }
 
 /* START BELOW */
+
+  /* 
+    My Styling
+    Primary:        #334155 (cool grey)
+    Accent:         #3B82F6 (light blue)
+    Text:           #0F172A (dark navy)
+    Background:     #F8FAFC (off-white)
+    Highlight:      #FEF3C7 (soft yellow)
+    Spacing Units:  8px
+  */
+
+/* BASE */
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16 px;
+  line-height: 1.5;
+  color: #0F172A;
+  background-color: #F8FAFC
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  color: #0F172A;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+/* LINKS */
+a {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Header / Nav */
+header {
+  padding: 16px 32px;
+  border-bottom: 1px;
+}
+
+header a {
+  color: #334155;
+  text-decoration: none;
+}
+
+nav li {
+  display: inline;
+  margin-right: 24px;
+}
+
+/* Buttons */
+button {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #F8FAFC;
+  background-color: #334155;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+/* Sections */
+section {
+  padding: 64px 32px;
+  border-bottom: 1px solid #334155;
+}
+
+/* Cards */
+.card{
+  background-color: #ffffff;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* How a Lesson Works */
+.how-it-works {
+  background-color: #FFFFFF;
+}
+
+.step {
+  margin-bottom: 32px;
+}
+
+.step-number {
+  display: inline-block;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  background-color: #fef3c7
+  border-radius: 24px;
+  padding: 8px 16px;
+}
