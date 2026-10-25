@@ -121,3 +121,17 @@ section {
   border-radius: 24px;
   padding: 8px 16px;
 }
+
+/* SIGN LIBRARY */
+.item {
+  background-color: #FFFFFF;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.sign-category {
+  color: #3b82f6;
+  font-weight: 600;
+}

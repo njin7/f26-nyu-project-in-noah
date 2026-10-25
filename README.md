@@ -73,3 +73,22 @@ A cold start takes **1–3 minutes**. Here's why:
 * **Your work is saved automatically.** Even if the Codespace stops, the files are stored on GitHub. You won't lose anything.  
 * **You get a fixed number of free hours per month** through the GitHub Student Developer Pack. A cold start uses some of those hours just booting up, so it's worth keeping one Codespace alive while you're actively working.  
 * **If you need to work offline,** you can always install VS Code and Git locally instead but it does take some set up — Codespaces is a convenience, not a requirement.
+
+
+What type of data you're displaying
+- I tried to create 6 road signs, each of which contain 4 fields:
+  - Name: the name of the sign
+  - Category: whether it is a regulatory or warning sign
+  - Meaning: what the sign means
+  - Action: what the driver should do in response
+
+How your JavaScript creates the HTML
+- "script.js" stores the signs in an array called "signs"
+- It finds the empty "div id = 'content-container'" in the index.html using "document.getElementByID()"
+- It loops through the array with "forEach()"
+- For each sign, it creates a div, and h3, and 3 "p" elements with "document.createElement()"
+- It fills in the text wtih textContent and adds classes with className so the cards use my style tile css
+- It uses appendChild() to put each piece inside the card, and then puts the card inside the container
+
+Any challenges you encountered
+- It was very tricky and frustrating to figure out how the "document.getElementByID()" and looping through "forEach()" all worked together... I had a lot of back and forth with Claude on figuring out how it worked and how to properly loop everything. 
