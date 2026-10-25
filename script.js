@@ -31,7 +31,7 @@ const signs = [
     category: "Warning sign",
     meaning: "A school is nearby and children may be crossing.",
     action: "Slow down and watch for kids near the road."
-  }
+  },
   {
     name: "Railroad Crossing",
     category: "Warning sign",
