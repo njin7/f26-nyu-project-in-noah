@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Drive</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href=" ">
-    <link href=" " href=" ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Header/nav → Hero → Ways to Practice → How a Lesson Works → Footer -->
+
   </head>
   <body>
     <!-- START BELOW -->
      <header>
-      <a href="#">Test Drive</a>
+      <a href="index.html">Test Drive</a>
       <nav>
-        <vl>
-          <li><a href="#">Lessons</a></li>
-          <li><a href="#">Sign Library</a></li>
-          <li><a href="#">Review Mistakes</a></li>
-          <li><a href="#">Settings</a></li>
-        </vl>
+        <ul>
+          <li><a href="#how-it-works">Lessons</a></li>
+          <li><a href="#sign-library">Sign Library</a></li>
+          <li><a href="#review-mistakes">Review Mistakes</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
       </nav>
       <button>Start practicing</button>
      </header>
 
     <main>
 
-<!-- Hero Section -->>
+<!-- Hero Section -->
  
     <section class="hero">
      <h1>Learn every sign before you hit the road.</h1>
@@ -42,50 +46,50 @@
      <div class = "card">
        <h3>Sign Library</h3>
        <p>Look up any sign: what it means and what to do.</p>
-       <a href="#">Open library &rarr;</a>
+       <a href="#sign-library">Open library &rarr;</a>
       </div>
 
      <div class = "card">
         <h3>Review Mistakes</h3>
         <p>Replay the signs you missed or reacted to late.</p>
-        <a href="#">Start review &rarr;</a>
+        <a href="#review-mistakes">Start review &rarr;</a>
       </div>
 
       <div class = "card">
         <h3>Settings</h3>
         <p>Audio, text size, and steering controls.</p>
-        <a href="#">Adjust settings &rarr;</a>
+        <a href="#settings">Adjust settings &rarr;</a>
       </div>
 
     </section>
 
 <!-- How a Lesson Works Section -->
 
-    <section class = "how-it-works">
-      <h2>How a lesson works</h2>
+    <section class = "how-it-works" id = "how-it-works">
+      <h2> How a lesson works</h2>
 
       <div class="step">
         <p class="step-number">1</p>
-        <h3>Pick a lesson</h3>
-        <p>Each one is a short drive built around a set of related road signage.</p>
+        <h3> Pick a lesson</h3>
+        <p> Each one is a short drive built around a set of related road signage.</p>
       </div>
 
       <div class = "step">
-        <p class=""step-number">2</p>
-        <h3>Follow the route</h3>
-        <p>Follow the set navigation and complete the driving course.</p>
+        <p class="step-number">2</p>
+        <h3> Follow the route</h3>
+        <p> Follow the set navigation and complete the driving course.</p>
       </div>  
 
       <div class = "step">
         <p class = "step-number">3</p>
-        <h3>Learn each sign as it appears</h3>
+        <h3> Learn each sign as it appears</h3>
         <p> Signs light up on a screen with a spoken explanation, so you know what to do before you reach them.</p>
       </div>
 
     </section>
 
 <!-- Sign Library Section -->
-    <section id="dynamic-content">
+    <section id="sign-library">
       <h2>Road signs to know</h2>
       <div id="content-container">
       </div>

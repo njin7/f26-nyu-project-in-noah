@@ -9,15 +9,14 @@
 
 /* START BELOW */
 
-  /* 
-    My Styling
-    Primary:        #334155 (cool grey)
-    Accent:         #3B82F6 (light blue)
-    Text:           #0F172A (dark navy)
-    Background:     #F8FAFC (off-white)
-    Highlight:      #FEF3C7 (soft yellow)
-    Spacing Units:  8px
-  */
+:root {
+  --primary-color: #334155;
+  --accent-color: #3B82F6;
+  --text-color: #0F172A;
+  --background-color: #F8FAFC;
+  --highlight-color: #FEF3C7;
+  --spacing-unit: 8px;
+} 
 
 /* BASE */
 body {
@@ -56,19 +55,24 @@ p {
 
 /* LINKS */
 a {
-  color: #3b82f6;
+  color: var(--color-accent);
   font-weight: 600;
 }
 
 /* Header / Nav */
 header {
   padding: 16px 32px;
-  border-bottom: 1px;
+  border-bottom: 1px solid var(--color-primary);
 }
 
 header a {
-  color: #334155;
+  color: var(--color-primary);
   text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 16px 0;
 }
 
 nav li {

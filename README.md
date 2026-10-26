@@ -92,3 +92,10 @@ How your JavaScript creates the HTML
 
 Any challenges you encountered
 - It was very tricky and frustrating to figure out how the "document.getElementByID()" and looping through "forEach()" all worked together... I had a lot of back and forth with Claude on figuring out how it worked and how to properly loop everything. 
+
+
+## Structure Audit — [10/26/26]
+
+**Fixed today:**
+- Cleaned up some typos and the fonts section in my index.html
+- Cleaned up some typos and syntax in my style.css
