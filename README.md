@@ -96,6 +96,19 @@ Any challenges you encountered
 
 ## Structure Audit — [10/26/26]
 
+Does it exist?
+- Yes, all of my sections exist.
+
+Is it visible?
+- Yes, all of my sections are visible.
+
+Does it match the mock up?
+- MOST of the same content is there. I have yet to figure out how to add images to their respective locations.
+
+Is the heading right?
+- Yes, the headings seem to be right.
+
 **Fixed today:**
 - Cleaned up some typos and the fonts section in my index.html
 - Cleaned up some typos and syntax in my style.css
+- Realized that my fonts weren't actually connected, so I inserted the appropriate google links for the fonts that I used 
