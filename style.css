@@ -73,6 +73,7 @@ a {
 
 /* Header / Nav */
 
+/* links are 48px tall so they are easy to tap */
 header a,
   .card a{
   display: inline-block;
@@ -96,6 +97,7 @@ header a {
   color: var (--color-primary);
 }
 
+/* nav: flex, links and button go along one row, so this is one axis */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -129,6 +131,7 @@ button {
 }
 
 /* Page shell */
+/* page: one column grid, every section stacks in order and the gap keeps spacing even */
 .page {
   display: grid;
   grid-template-columns: 1fr;
@@ -146,10 +149,12 @@ section {
   gap: 32px;
 }
 
+/* keeps the hero paragraph from getting too wide to read */
 .hero-text p {
   max-width: 560px;
 }
 
+/* hero buttons: flex, two buttons in one row that wrap on small screens */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -163,7 +168,7 @@ section {
 }
 
 /* More ways to practice */
-
+/* card row: auto-fit, three equal cards that drop to one column by themselves */
 .card-row{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -184,6 +189,7 @@ section {
   background-color: var(--color-background);
 }
 
+/* step row: auto-fit, same idea as the cards, three steps across on desktop */
 .step-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -200,6 +206,7 @@ section {
 }
 
 /* Sign Library */
+/* sign cards: auto-fit, the 6 JavaScript cards make two rows of three on desktop */
 #content-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
