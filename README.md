@@ -116,3 +116,11 @@ Is the heading right?
 11/1/26 Update:
 This week, I used CSS grid and felxbox to make my page start to match my mock-up. The page shell, hero section, card row, step row, and sign library are now grids. The nav and the hero buttons use flexbox.
 
+mock-up link: https://cdn.phototourl.com/member/2026-11-02-40932df8-f577-480f-aff2-a586acda11af.png
+
+Which sections did you grid, and which did you leave in normal flow? Why?
+- I turned the "more ways to practice," "how a lesson works," and the "sign library" sections into a grid on the desktop version because it makes a better use of the available space. If I stuck with the column, then I think it would've taken up an unecessary amount of space, which would make the user scroll more than necessary.
+Where did you use Flexbox instead of Grid, and why?
+- I used flexbox in the header/nav and the hero section buttons. In the header, my logo sits on the left and the nav links/buttons sit on the right... or at least that's what I intended to do... but I'm still struggling to figure out the html. Regardless, I chose this route because this is what is commonly seen on most websites' navbars (i.e., logo left and nav buttons right)
+What's one thing in your layout that still doesn't match your mockup?
+- My navbar/logo orientation are still stacked on top of each other and I still need to figure out how to make visible cards for each of the grid items.
