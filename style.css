@@ -1,3 +1,15 @@
+/* LAYOUT PLAN
+   Two-dimensional (gridding these):
+   - page shell   → one column holding every section, 32px gap
+   - hero         → text left, car image right
+   - practice     → three cards in a row
+   - how it works → three steps in a row
+   - sign library → JavaScript cards in rows of three
+
+   One-dimensional (Flexbox, not Grid):
+   - header/nav   → logo left, links + button right
+   - hero buttons → two buttons side by side
+
 /* === RESET === */
 *,
 *::before,
@@ -60,6 +72,13 @@ a {
 }
 
 /* Header / Nav */
+
+header a,
+  .card a{
+  display: inline-block;
+  line-height: 48px;
+ }
+
 header {
   padding: 16px 32px;
   border-bottom: 1px solid var(--color-primary);
@@ -70,9 +89,25 @@ header a {
   text-decoration: none;
 }
 
+.logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var (--color-primary);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
 nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   list-style: none;
-  margin: 16px 0;
 }
 
 nav li {
@@ -93,16 +128,52 @@ button {
   margin-bottom: 16px;
 }
 
-/* Sections */
+/* Page shell */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
 section {
-  padding: 64px 32px;
-  border-bottom: 1px solid #334155;
+  padding: 32px 16px;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.hero-text p {
+  max-width: 560px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--color-primary);
+}
+
+/* More ways to practice */
+
+.card-row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
 }
 
 /* Cards */
 .card{
-  background-color: #ffffff;
-  border: 1px solid #334155;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 24px;
@@ -110,11 +181,13 @@ section {
 
 /* How a Lesson Works */
 .how-it-works {
-  background-color: #FFFFFF;
+  background-color: var(--color-background);
 }
 
-.step {
-  margin-bottom: 32px;
+.step-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
 }
 
 .step-number {
@@ -126,16 +199,48 @@ section {
   padding: 8px 16px;
 }
 
-/* SIGN LIBRARY */
+/* Sign Library */
+#content-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
 .item {
-  background-color: #FFFFFF;
-  border: 1px solid #334155;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 24px;
 }
 
 .sign-category {
-  color: #3b82f6;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Sections */
+section {
+  padding: 64px 32px;
+  border-bottom: 1px solid #334155;
+}
+
+.step {
+  margin-bottom: 32px;
+}
+
+
+
+/* SIGN LIBRARY */
+.item {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.sign-category {
+  color: var(--color-accent);
   font-weight: 600;
 }

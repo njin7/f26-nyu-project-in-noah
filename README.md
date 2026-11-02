@@ -112,3 +112,7 @@ Is the heading right?
 - Cleaned up some typos and the fonts section in my index.html
 - Cleaned up some typos and syntax in my style.css
 - Realized that my fonts weren't actually connected, so I inserted the appropriate google links for the fonts that I used 
+
+11/1/26 Update:
+This week, I used CSS grid and felxbox to make my page start to match my mock-up. The page shell, hero section, card row, step row, and sign library are now grids. The nav and the hero buttons use flexbox.
+

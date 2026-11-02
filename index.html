@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Header/nav → Hero → Ways to Practice → How a Lesson Works → Footer -->
-
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+
+<!-- Header/nav → Hero → Ways to Practice → How a Lesson Works → Footer -->
+
     <!-- START BELOW -->
      <header>
-      <a href="index.html">Test Drive</a>
+      <a href="index.html" class = "logo"> Test Drive</a>
       <nav>
         <ul>
           <li><a href="#how-it-works">Lessons</a></li>
@@ -27,15 +28,20 @@
       <button>Start practicing</button>
      </header>
 
-    <main>
+    <main class = "page">
 
 <!-- Hero Section -->
  
     <section class="hero">
-     <h1>Learn every sign before you hit the road.</h1>
-      <p>Practice short, guided drives at your own pace. as each road sign comes up. Test Drive highlights it and explains out loud what it means and what to do.</p>
-     <button>Start practicing &rarr;</button>
-      <button class="button-outline">Browse the sign library</button>
+      <div class = "hero-text">
+        <h1>Learn every sign before you hit the road.</h1>
+        <p>Practice short, guided drives at your own pace. as each road sign comes up. Test Drive highlights it and explains out loud what it means and what to do.</p>
+        <div class = "hero-buttons">
+          <button>Start practicing &rarr;</button>
+          <button class="button-outline">Browse the sign library</button>
+        </div>
+      </div>
+      <img src="images/hero-car.jpg">     
     </section>
 
 <!-- More Ways to Practice Section -->
@@ -43,24 +49,25 @@
     <section class="practice">
       <h2>More ways to practice</h2>
 
-     <div class = "card">
+     <div class = "card-row">
+      <div class = "card">
        <h3>Sign Library</h3>
        <p>Look up any sign: what it means and what to do.</p>
        <a href="#sign-library">Open library &rarr;</a>
       </div>
 
-     <div class = "card">
+     <div class = "card" id = "review-mistakes">
         <h3>Review Mistakes</h3>
         <p>Replay the signs you missed or reacted to late.</p>
         <a href="#review-mistakes">Start review &rarr;</a>
       </div>
 
-      <div class = "card">
+      <div class = "card" id = "settings">
         <h3>Settings</h3>
         <p>Audio, text size, and steering controls.</p>
         <a href="#settings">Adjust settings &rarr;</a>
       </div>
-
+      </div>
     </section>
 
 <!-- How a Lesson Works Section -->
@@ -68,27 +75,29 @@
     <section class = "how-it-works" id = "how-it-works">
       <h2> How a lesson works</h2>
 
-      <div class="step">
-        <p class="step-number">1</p>
-        <h3> Pick a lesson</h3>
-        <p> Each one is a short drive built around a set of related road signage.</p>
+      <div class="step-row">
+        <div class = "step">
+          <p class="step-number">1</p>
+          <h3> Pick a lesson</h3>
+          <p> Each one is a short drive built around a set of related road signage.</p>
+        </div>
+
+        <div class = "step">
+          <p class="step-number">2</p>
+          <h3> Follow the route</h3>
+          <p> Follow the set navigation and complete the driving course.</p>
+        </div>  
+
+        <div class = "step">
+          <p class = "step-number">3</p>
+          <h3> Learn each sign as it appears</h3>
+          <p> Signs light up on a screen with a spoken explanation, so you know what to do before you reach them.</p>
+        </div>
       </div>
-
-      <div class = "step">
-        <p class="step-number">2</p>
-        <h3> Follow the route</h3>
-        <p> Follow the set navigation and complete the driving course.</p>
-      </div>  
-
-      <div class = "step">
-        <p class = "step-number">3</p>
-        <h3> Learn each sign as it appears</h3>
-        <p> Signs light up on a screen with a spoken explanation, so you know what to do before you reach them.</p>
-      </div>
-
     </section>
 
 <!-- Sign Library Section -->
+ 
     <section id="sign-library">
       <h2>Road signs to know</h2>
       <div id="content-container">
