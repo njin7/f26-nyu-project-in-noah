@@ -69,3 +69,31 @@ signs.forEach(sign => {
   itemDiv.appendChild(action);
   container.appendChild(itemDiv);
 });
+
+
+//Week 8 content:
+let answersHidden = false; //let: this value changes
+
+// Find elements
+const quizButton = document.getElementById("quiz-button");
+const quizMessage = document.getElementById("quiz-message");
+
+// Change state when button clicked
+quizButton.addEventListener("click", () => {
+
+  answersHidden = !answersHidden;
+
+  console.log("answersHidden:", answersHidden);
+
+  // Decide/update the page
+  if (answersHidden) {
+    container.classList.add("quiz-mode");
+    quizButton.textContent = "Show answers";
+    quizMessage.textContent = "Quiz mode is on. Do you know what each sign means?";
+  } else {
+    container.classList.remove("quiz-mode");
+    quizButton.textContent = "Hide answers";
+    quizMessage.textContent = "Answers are showing. Hide them to test yourself.";
+  }
+
+});

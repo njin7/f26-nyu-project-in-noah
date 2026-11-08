@@ -124,3 +124,28 @@ Where did you use Flexbox instead of Grid, and why?
 - I used flexbox in the header/nav and the hero section buttons. In the header, my logo sits on the left and the nav links/buttons sit on the right... or at least that's what I intended to do... but I'm still struggling to figure out the html. Regardless, I chose this route because this is what is commonly seen on most websites' navbars (i.e., logo left and nav buttons right)
 What's one thing in your layout that still doesn't match your mockup?
 - My navbar/logo orientation are still stacked on top of each other and I still need to figure out how to make visible cards for each of the grid items.
+
+
+Week 8 [11/2/26]
+
+** State Plan ** 
+- **User story:** As a new driver, I want to hide the answers in the sign library so that I can test myself on what each sign means before I hit the road.
+- **What does the page remember?** Whether the answers are hidden or showing.
+- **What does it start at?** `false`, so the answers are showing when the page loads.
+- **What changes it?** Clicking the "Hide answers" / "Show answers" button.
+- **What does the user see?** In quiz mode the "What it means" and "What to do" lines disappear, the sign cards turn yellow, and the button and message text change.
+- **What does the `if/else` decide?** If answers are hidden, it turns quiz mode on and changes the button to "Show answers". Else, it turns quiz mode off and changes the button back to "Hide answers".
+
+**What changed:**
+**What was hard, and what I tried:**
+  My first idea was a hover effect on the "Start practicing" button, but I found out hover is just CSS (`:hover`) and doesn't need a `let` variable or an `if/else`, so it wouldn't count for this assignment. I switched to show/hide because it actually helps someone learning signs. The `!answersHidden` line was new to me. I had to understand that it just flips true to false and false to true. Git has also been hard for me in general.
+**What happened when I tried to break it:**
+  At the start, the page loaded with all the answers showing and no red errors in the Console. In normal use, one click hid the answers and the Console showed `answersHidden: true`, and another click showed them again with `false`. I clicked the button really fast more than 10 times, and the button text matched what was on the screen.
+**What I learned or changed my mind about:**
+  Changing a variable doesn't change the screen by itself!
+**Question for Joey:**
+  The Quiz thing wasn't originally in my mockup... I just added it since it would be a feature that you would see on a separate dedicated library page for the road signs... should I add this to my mock up file?
+**Next week's goal:**
+  Publish live site, tidy up some visual designs with the help of Claude, and fix any broken interactions/navigation
+**AI use:**
+  I worked with Claude to come up with some ideas for interactive change state features on my landing page since I originally did not have much. I also worked with Claude to get a better understanding of how to do the variable change for the quiz mode/hide answers. 

@@ -228,6 +228,21 @@ section {
   font-weight: 600;
 }
 
+/* QUIZ MODE (week 8) */
+#quiz-button {
+  margin-bottom: 24px;
+}
+
+/* answers disappear when quiz mode is on */
+.quiz-mode .sign-answer {
+  display: none;
+}
+
+/* cards turn yellow so the user can tell quiz mode is on */
+.quiz-mode .item {
+  background-color: var(--color-highlight);
+}
+
 /* Sections */
 section {
   padding: 64px 32px;
