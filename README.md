@@ -125,6 +125,51 @@ Where did you use Flexbox instead of Grid, and why?
 What's one thing in your layout that still doesn't match your mockup?
 - My navbar/logo orientation are still stacked on top of each other and I still need to figure out how to make visible cards for each of the grid items.
 
+Week 9 [11/15/26]
+
+**Render Plan**
+- **User story:** As a new driver, I want to guess what a sign means before I check the answer, so that I actually test myself instead of just reading.
+- **State:** Which sign's answer is open (`openSign`). It starts at `"none"`, so every answer is hidden.
+- **What changes it:** Clicking "Show answer" on a card sets `openSign` to that sign's name. Clicking "Hide answer" on the open card sets it back to `"none"`. Clicking a different card's "Show answer" switches `openSign` to that sign
+- **What render() draws:** The sign cards in `#content-container`, rebuilt from my `signs`
+- **The if inside the loop:** For each sign, if its name matches `openSign`, it adds the "What it means" and "What to do" lines, turns the card yellow, and makes the button say "Hide answer". Otherwise it only shows the name, category and a "Show answer" button
+- **What else render() works out:** The message above the cards. It says to guess and check when nothing is open, or "Checking: [sign name]" when a card is open.
+
+**What changed:**
+I changed my quiz mode from one button that hid every answer at once to a "Show answer" button on each card. Now you can check one sign at a time.
+
+**Patching vs. rendering:**
+Before, my click handler changed the page directly by adding a class and changing the button text, and the cards were only built once. Now the click only changes `openSign` and calls `render()`, which clears the cards and rebuilds all of them
+
+**What was hard, and what I tried:**
+It was confusing at first that the click listener goes inside `render()`, because the buttons get deleted and rebuilt every time. I also had to remember that writing `function render()` doesn't do anything until you call `render();` at the bottom.
+
+**What happened when I tried to break it:**
+At the start, all 6 cards showed with no answers and every button said "Show answer." I clicked Show answer on Stop and it turned yellow, showed the answer, and the message said "Checking: Stop." I clicked the same button 10 times and it just switched between open and closed, and there were always 6 cards
+
+**What I learned or changed my mind about:**
+I learned it's easier to just redraw everything from the state than to fix pieces of the page one at a time
+
+**Next week's goal:**
+Publish my site(?) so I can add the Live site link, and add the logo and card icons to match my mockup one (or improve it).
+
+**AI Use**
+Again, I consulted Claude to help me understand the render() function and how/where to start in updating parts of my script.js code. From what I remember from class on Monday (11/9), I was able to transfer over some of what we did in the code along, but there were some parts I was unsure about how to apply for my project, so I had Claude look at the code along example and my project, and I had it help me bridge the gap between. I also had Claude do checks on my code to find any errors in syntax/structuring so that the live website ran properly. 
+
+
+At the start: Does the page match your starting value before anyone touches it?
+- Yes, I believe it does
+
+In normal use: Does it respond correctly each time?
+- Yes
+
+At the limit: Click the same thing ten times. Click things in an order you didn't plan for. Does the page still make sense?
+- After limit testing, I did not encounter any severe or noticeable breaks or unaccounted for glitches.
+
+Does it agree with itself? Does every count or message match what's actually on the screen?
+* Yes(?)
+
+
 
 Week 8 [11/2/26]
 

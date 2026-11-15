@@ -229,18 +229,26 @@ section {
 }
 
 /* QUIZ MODE (week 8) */
-#quiz-button {
+/* #quiz-button {
   margin-bottom: 24px;
 }
 
 /* answers disappear when quiz mode is on */
-.quiz-mode .sign-answer {
+/*.quiz-mode .sign-answer {
   display: none;
 }
 
 /* cards turn yellow so the user can tell quiz mode is on */
-.quiz-mode .item {
+/*.quiz-mode .item {
   background-color: var(--color-highlight);
+} */
+
+.is-open {
+  background-color: var(--color-highlight);
+}
+
+.item button {
+  margin-top: 8px;
 }
 
 /* Sections */

@@ -42,58 +42,77 @@ const signs = [
 
 // Get the container from index.hmtl
 const container = document.getElementById("content-container");
+const quizMessage = document.getElementById("quiz-message");
 
-// Loop through the signs and build a card for each one
-signs.forEach(sign => {
-  // Create Elements
-  const itemDiv = document.createElement("div");
-  const title = document.createElement("h3");
-  const category = document. createElement("p");
-  const meaning = document.createElement("p");
-  const action = document.createElement("p");
+//Week 9 content:
+// openSign: new drivers need to guess first, then check one answer at a time
+let openSign = "none"; //let: this value changes
 
-  // Set attribute
-  itemDiv.className = "item"
-  category.className = "sign-category"
+// render: draws the sign cards, shows the answer for openSign only, and updates the message
+function render() {
+  // Clear the old cards, so nothing is added twice
+  container.innerHTML = "";
 
-  // Set content
-  title.textContent = sign.name;
-  category.textContent = sign.category;
-  meaning.textContent = "What it means: " + sign.meaning;
-  action.textContent = "What to do: " + sign.action;
+  // Loop through the signs and build a card for each one
+  signs.forEach(sign => {
+    // Create Elements
+    const itemDiv = document.createElement("div");
+    const title = document.createElement("h3");
+    const category = document. createElement("p");
+    const meaning = document.createElement("p");
+    const action = document.createElement("p");
+    const button = document.createElement("button");
 
-  // Append to structure
-  itemDiv.appendChild(title);
-  itemDiv.appendChild(category);
-  itemDiv.appendChild(meaning);
-  itemDiv.appendChild(action);
-  container.appendChild(itemDiv);
-});
+    // Set attribute
+    itemDiv.className = "item"
+    category.className = "sign-category"
+    button.className = "button-outline"
+
+    // Set content
+    title.textContent = sign.name;
+    category.textContent = sign.category;
+    meaning.textContent = "What it means: " + sign.meaning;
+    action.textContent = "What to do: " + sign.action;
+
+    // Append to structure
+    itemDiv.appendChild(title);
+    itemDiv.appendChild(category);
+
 
 
 //Week 8 content:
-let answersHidden = false; //let: this value changes
+// Decide if this card shows its answer
+    if (sign.name === openSign) {
+      itemDiv.appendChild(meaning);
+      itemDiv.appendChild(action);
+      itemDiv.className = "item is-open";
+      button.textContent = "Hide answer";
+    } else {
+      button.textContent = "Show answer";
+    }
 
-// Find elements
-const quizButton = document.getElementById("quiz-button");
-const quizMessage = document.getElementById("quiz-message");
+    itemDiv.appendChild(button);
+    container.appendChild(itemDiv);
 
-// Change state when button clicked
-quizButton.addEventListener("click", () => {
+    // Change the state, then redraw the page
+    button.addEventListener("click", () => {
+      if (openSign === sign.name) {
+        openSign = "none";
+      } else {
+        openSign = sign.name;
+      }
+      console.log("openSign:", openSign);
+      render();
+    });
+  });
 
-  answersHidden = !answersHidden;
-
-  console.log("answersHidden:", answersHidden);
-
-  // Decide/update the page
-  if (answersHidden) {
-    container.classList.add("quiz-mode");
-    quizButton.textContent = "Show answers";
-    quizMessage.textContent = "Quiz mode is on. Do you know what each sign means?";
+  // Work out the message from the state
+  if (openSign === "none") {
+    quizMessage.textContent = "Guess what each sign means, then click Show answer to check.";
   } else {
-    container.classList.remove("quiz-mode");
-    quizButton.textContent = "Hide answers";
-    quizMessage.textContent = "Answers are showing. Hide them to test yourself.";
+    quizMessage.textContent = "Checking: " + openSign + ". Did you get it right?";
   }
+}
 
-});
+// Draw the page once at the start
+render();
