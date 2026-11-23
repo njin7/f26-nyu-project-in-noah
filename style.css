@@ -251,6 +251,29 @@ section {
   margin-top: 8px;
 }
 
+/* SIGN SEARCH (week 10) */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#sign-search {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.empty {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 /* Sections */
 section {
   padding: 64px 32px;

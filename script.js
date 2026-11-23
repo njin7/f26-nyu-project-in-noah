@@ -43,25 +43,41 @@ const signs = [
 // Get the container from index.hmtl
 const container = document.getElementById("content-container");
 const quizMessage = document.getElementById("quiz-message");
+const count = document.getElementById("count");
+const searchInput = document.getElementById("sign-search");
 
 //Week 9 content:
 // openSign: new drivers need to guess first, then check one answer at a time
 let openSign = "none"; //let: this value changes
+
+//Week 10 content:
+// searchText: drivers need to find one sign fast instead of scrolling through all of them
+let searchText = "";
+
+// matchesSearch: does this sign's name or category have the search text in it? 
+function matchesSearch(sign) {
+  const text = (sign.name + " " + sign.category).toLowerCase();
+  return text.includes(searchText.trim().toLowerCase());
+}
 
 // render: draws the sign cards, shows the answer for openSign only, and updates the message
 function render() {
   // Clear the old cards, so nothing is added twice
   container.innerHTML = "";
 
+   let shown = 0;
+
   // Loop through the signs and build a card for each one
   signs.forEach(sign => {
-    // Create Elements
-    const itemDiv = document.createElement("div");
-    const title = document.createElement("h3");
-    const category = document. createElement("p");
-    const meaning = document.createElement("p");
-    const action = document.createElement("p");
-    const button = document.createElement("button");
+     // Only build the card if it matches the search
+     if (matchesSearch(sign)) {
+      // Create Elements
+      const itemDiv = document.createElement("div");
+      const title = document.createElement("h3");
+      const category = document. createElement("p");
+      const meaning = document.createElement("p");
+      const action = document.createElement("p");
+      const button = document.createElement("button");
 
     // Set attribute
     itemDiv.className = "item"
@@ -104,7 +120,23 @@ function render() {
       console.log("openSign:", openSign);
       render();
     });
+
+     shown = shown + 1;
+    }
   });
+
+// If nothing matched, tell the learner what to do next
+  if (shown === 0) {
+    const empty = document.createElement("p");
+    empty.className = "empty"
+    empty.textContent = 'No signs match. Try another word like "stop" or "warning", or clear the search box.';
+    container.appendChild(empty);
+  }
+
+  // Show the count
+  count.textContent = "Showing " + shown + " of " + signs.length + " signs";
+
+
 
   // Work out the message from the state
   if (openSign === "none") {
@@ -113,6 +145,18 @@ function render() {
     quizMessage.textContent = "Checking: " + openSign + ". Did you get it right?";
   }
 }
+
+// The "input" event fires every time the driver types or deletes a letter
+searchInput.addEventListener("input", (event) => {
+  // Change the state...
+  searchText = event.target.value;
+  openSign = "none"; // close any open answer, so the message never names a card that got hidden
+  console.log("searchText:", searchText);
+
+  // ...then redraw the page from it
+  render();
+});
+
 
 // Draw the page once at the start
 render();

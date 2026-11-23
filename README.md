@@ -125,6 +125,36 @@ Where did you use Flexbox instead of Grid, and why?
 What's one thing in your layout that still doesn't match your mockup?
 - My navbar/logo orientation are still stacked on top of each other and I still need to figure out how to make visible cards for each of the grid items.
 
+Week 10 [11/22/26]
+
+**Event Plan**
+- User story: As a new driver, I want to search for a sign by name so that I can quickly check one I just saw on the road.
+- **The event: `input` on the search box (`#sign-search`). It fires every time I type or delete a letter, so the cards update while I'm typing.
+- State: `searchText`, which starts at `""` so all 6 signs show. It's new, and it works alongside my Week 9 state `openSign`.
+- My function: `matchesSearch(sign)` answers "does this sign's name or category have the search text in it?" It takes one sign from my array and returns true or false.
+
+What changed:
+I added a search box to my Sign Library. Typing fires an `input` event that updates `searchText` and calls `render()`, so only matching signs show, with a "Showing X of 6 signs" count. I also added `matchesSearch(sign)` and a message when nothing matches.
+
+Why redraw on every event:
+`render()` already draws the cards, count, and message from the state, so my handler just changes `searchText` and calls it. If the handler changed the page itself, those pieces could stop matching. Redrawing every time keeps them in sync.
+
+What was hard, and what I tried:
+If I opened Stop and then searched "yield," Stop disappeared but the message still said "Checking: Stop." I fixed it by setting `openSign` back to `"none"` in the search handler.
+
+What happened when I tried to break it:
+At the start I saw all 6 cards and "Showing 6 of 6 signs." Typing `stop` showed 1 card and "Showing 1 of 6," and `warning` showed 2. `STOP` and `   stop   ` still found Stop. `xyz` showed "Showing 0 of 6" and the no-match message, and clearing the box brought all 6 back. In the Console, `matchesSearch(signs[0])` was `true` with an empty box and `false` after typing "yield."
+
+What I learned or changed my mind about:
+An empty search matches everything, because every string "includes" an empty string. I also learned two events can change state and both just call `render()`.
+
+Question for Joey:
+Is it okay that searching closes the open answer, or should the answer stay open if that sign still matches?
+
+Next week's goal:
+Publish my site so I can add the Live site link, and add the missing logo and card icons.
+
+
 Week 9 [11/15/26]
 
 **Render Plan**
