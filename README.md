@@ -125,6 +125,64 @@ Where did you use Flexbox instead of Grid, and why?
 What's one thing in your layout that still doesn't match your mockup?
 - My navbar/logo orientation are still stacked on top of each other and I still need to figure out how to make visible cards for each of the grid items.
 
+Week 11 [11/23/26]
+
+USER STORY AUDIT
+
+MAIN STORY: To encounter and review pop-up highlights for traffic signs AND replay and review traffic scenarios within the driving simulator interface. 
+
+Criterion 1: Review Pop-up Highlights
+  Status (🟡):
+  Notes: Althought users can't encounter and review pop-up highlights for traffic signage WITHIN a driving simulation, they are still able to review them like flashcards on the main landing page. 
+
+Criterion 2: Replay and review traffic scenarios
+  Status (❌):
+  Notes: Was not able to get that far into my original project idea
+
+Criterion 3:
+  Status (✅ / 🟡 / ❌):
+  Notes:
+
+
+USER TEST NOTES (filled in by the maker)
+Maker: Noah
+Tester:
+
+Who the user is (one sentence): People who are learning about the basics of traffic laws and traffic signage
+
+Task 1 (full main story): Learn about each of the differnt traffic signs
+  Completed?  Yes
+  Where they hesitated or got stuck: Tried to click on the "sign library" 
+  What they said they expected: 
+
+Task 2: Search for a specific traffic sign (e.g., "School Zone") that you want to review
+  Completed?  Yes
+  Where they hesitated or got stuck: Did not hesitate or get stuck
+  What they said they expected:
+
+Task 3 (optional):
+  Completed?  Yes / With trouble / No
+  Where they hesitated or got stuck:
+  What they said they expected:
+
+Tester's one-line takeaway (ask them at the end):
+"The one thing I'd fix first is..."  
+
+PUNCH LIST
+
+MUST SHIP (aim for 3–5 items; note where each came from: story audit or user test)
+-
+-
+-
+
+NICE TO HAVE
+-
+-
+
+CUT (item, then why)
+-
+-
+
 Week 10 [11/22/26]
 
 **Event Plan**

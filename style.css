@@ -82,13 +82,18 @@ header a,
   line-height: 48px;
  }
 
+/* header: flex, logo on the left, links and button on the right */
 header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
   padding: 16px 32px;
-  border-bottom: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
 }
 
 header a {
-  color: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
 }
 
@@ -96,15 +101,15 @@ header a {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: var (--color-primary);
 }
 
-/* nav: flex, links and button go along one row, so this is one axis */
+/* nav: flex, margin-left auto pushes it to the right side */
 nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 24px;
+  margin-left: auto;
 }
 
 nav ul {
@@ -114,11 +119,13 @@ nav ul {
   list-style: none;
 }
 
-nav li {
-  display: inline;
-  margin-right: 24px;
+/* start practicing button: white so it shows up on the dark blue bar */
+header button {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  margin: 0;
 }
-
 /* Buttons */
 button {
   font-family: "Inter", sans-serif;
